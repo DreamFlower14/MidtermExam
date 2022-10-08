@@ -7,10 +7,10 @@
 # 스프링 기초 
 
 ### 의존성 
-![img.png](img.png)
+![img.png](img/img.png)
 
 
-![img_1.png](img_1.png)
+![img_1.png](img/img_1.png)
 
 > spring.mvc.view.prefix=/WEB-INF/jsp/
 spring.mvc.view.suffix=.jsp
