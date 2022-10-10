@@ -4,7 +4,7 @@
 
 ---
 
-# 중간고사 예상 문제
+# 하둡 중간고사 예상 문제
 
 **1. 하둡의 필수 구성요소 3가지를 작성하시오.**
 ```java
@@ -45,21 +45,22 @@
 ```
 
 ---
-**6. 현재 열린 포트를 확인하기 위한 명령어는 무엇인가?**
+6. 현재 열린 포트를 확인하기 위한 명령어는 무엇인가?
 ```java
-        netstat -tunalp | grep LISTEN
-```
-![img_1.png](img_1.png)
+        netstat -ntlp | grep java
 
-**7. CentOS 7의 8088번 포트의 외부 접속을 혀용하기 위한 방화벽 설정, 방화벽 재부팅, 방화벽 내용 확인 명령어를 작성하시오.**
+        // 4장 97p
+```
+![img_1.png](img/img_1.png)
+
+7. CentOS 7의 8088번 포트의 외부 접속을 혀용하기 위한 방화벽 설정, 방화벽 재부팅, 방화벽 내용 확인 명령어를 작성하시오.
 ```java
-        - 방화벽 설정 명령어 : firewall-cmd --permanent --zone=public --add-port=포트번호/tcp
+        - 방화벽 설정 명령어 : firewall-cmd --permanent --zone=public --add-port=8088/tcp
         - 방화벽 재부팅 명령어 : firewall-cmd --reload
         - 방화벽 전체 내용 확인 명령어 : firewall-cmd --list-all
 
         // 4장 87p
 ```
-
 
 **8. 생성된 SSH 키의 권한 설정 명령어를 작성하시오.**
 ```java
@@ -73,15 +74,15 @@
 
 9. hadoop 계정의 sudo 권한을 부여하기 위해 수정하는 파일은 무엇인가?
 ```java
-        sshd_config
+        /etc/sudoers
 
-        // vi /etc/ssh/sshd_config : 파일 수정 명령어
-        // 3장 16p
+        // vi /etc/sudoers : 파일 수정 명령어
+        // 4장 26p
 ```
 
 10. 설치한 자바의 환경 설정하는 파일은 무엇이며, 설정 후 적용하기 위한 명령어는 무엇인가?
 ```java
-        - 환경 설정 파일 : vi /etc/profile
+        - 환경 설정 파일 :  /etc/profile
         - 적용 명령어 : source /etc/profile
 
         // 4장 41P
@@ -105,22 +106,22 @@
         // 4장 39P
 ```
 
-**13. 하둡의 네임노드를 포멧하기 위한 명령어를 작성하시오.**
+13. 하둡의 네임노드를 포멧하기 위한 명령어를 작성하시오.
 ```java
         hdfs namenode -format
 
         // 4장 83p
 ```
 
-14. 하둡의 실행 관련 파일들이 존재하는 폴더는 무엇인가?
+**14. 하둡의 실행 관련 파일들이 존재하는 폴더는 무엇인가?**
  > - 하둡 설치 경로 : /usr/local/hadoop
 ```java
         /usr/local/hadoop/sbin
 
-        // 4장 59p
+        // 4장 60p
 ```
 
-15. 하둡의 환경 설정 관련 파일들이 존재하는 폴더는 무엇인가?
+**15. 하둡의 환경 설정 관련 파일들이 존재하는 폴더는 무엇인가?**
 > - 하둡 설치 경로 : /usr/local/hadoop
 ```java
         /usr/local/hadoop/etc
@@ -140,6 +141,7 @@
 
         // 4장 83p 
 ```
+![img.png](img/img.png)
 
 **18. DHCP 에 대해 자세히 설명하시오.**
 ```java
@@ -169,7 +171,7 @@
                 - "네 여기 IP 주소 있습니다 1시간동안 임대해드릴게요~"
                 
 ```
-![img_2.png](img_2.png)
+![img_2.png](img/img_2.png)
 
 19. vi 편집기에서 맨 마지막 줄로 이동하는 단축키는 무엇인가?
 ```java
@@ -183,6 +185,7 @@
         - 종료 명령어 : ./stop-all.sh
 
         // cd /usr/local/hadoop/sbin : 하둡 실행 관련 명령어가 모인 폴더, 여기서 명령어를 쳐야한다.
+        // 4장 93p
 ```
 
 
